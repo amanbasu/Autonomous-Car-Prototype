@@ -16,12 +16,18 @@ The bluetooth controlled car was driven on an indoor track and the training data
 
 ### Image Processing
 In order to reduce the computation, images were resized from 480x640 to 24x32 pixels.
-Then the image was cropped to keep only the track area. Final image size was 14x32 pixels.
+Then the image were cropped to keep only the track area. Final image size was 14x32 pixels.
 The images were normalized before giving them to the input layer.
 
-### Model Architecture
+### Model Architectures
 #### 1. CNN
 The first model of cnn was of two convolutional layer followed by 1 fully connected then output layer.
 The model accuracy was around 91%.
 Since, the images were manually labelled, there was a huge human error. 91% accuracy of model is hence justified.
-
+[a link](https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/tf_model_cnn.py)
+#### 2. RNN
+The RNN model was trained with two LSTM layers. Accuracy was 89.8%.
+[a link](https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/tf_model_rnn.py)
+#### 3. CNN + RNN
+The final model was cnn followed by rnn.
+[a link](https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/tf_model_cnn_rnn.py)
