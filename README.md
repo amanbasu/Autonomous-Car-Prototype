@@ -32,4 +32,4 @@ The RNN model was trained with two LSTM layers. Accuracy was 89.8%.
 The final model was cnn followed by rnn. This model performed very badly on the training data with the accuracy of 70% since, after the convolutional layer, there was huge loss in the temporal features of the data.
 [Go to file](https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/tf_model_cnn_rnn.py)
 
-Find more details about the project [here].(https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/Review.ipynb)
+Find more details about the project [here](https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/Review.ipynb) .
