@@ -24,10 +24,10 @@ The images were normalized before giving them to the input layer.
 The first model of cnn was of two convolutional layer followed by 1 fully connected then output layer.
 The model accuracy was around 91%.
 Since, the images were manually labelled, there was a huge human error. 91% accuracy of model is hence justified.
-[a link](https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/tf_model_cnn.py)
+[Go to file](https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/tf_model_cnn.py)
 #### 2. RNN
 The RNN model was trained with two LSTM layers. Accuracy was 89.8%.
-[a link](https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/tf_model_rnn.py)
+[Go to file](https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/tf_model_rnn.py)
 #### 3. CNN + RNN
-The final model was cnn followed by rnn.
-[a link](https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/tf_model_cnn_rnn.py)
+The final model was cnn followed by rnn. This model performed very badly on the training data with the accuracy of 70% since, after the convolutional layer, there was huge loss in the temporal features of the data.
+[Go to file](https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/tf_model_cnn_rnn.py)
