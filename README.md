@@ -12,5 +12,5 @@ The bluetooth controlled car was driven on an indoor track and the training data
 3. Right (R)
 4. Stop  (S)
 
-<img src="https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/track_image1.jpg" width="250px" height="250px"/> <img src="https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/track_image2.jpg" width="250px" height="250px"/> <img src="https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/track_image3.jpg" width="250px" height="250px"/>
+<img src="https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/track_image1.jpg" width="250px" height="250px"/> <img src="https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/track_image2.jpg" width="250px" height="250px"/> <img src="https://github.com/First-Of-His-Name/Autonomous-Car-Prototype/blob/master/track_image3.jpg" width="250px" height="250px"/><br>
                                          "image005.jpg F"                "image457.jpg L"
