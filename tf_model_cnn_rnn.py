@@ -5,23 +5,24 @@ from sklearn.model_selection import train_test_split
 from tensorflow.contrib import rnn 
 from tensorflow.python.ops import rnn, rnn_cell
 
-dropout = 0.5
-n_classes = 4
-batch_size = 128
-hm_epochs = 10
+dropout = 0.8
+n_classes = 3
+batch_size = 64
+hm_epochs = 30
 
 chunk_size = 32
 n_chunks = 14
-rnn_size = 128
+rnn_size = 64
 
 x = tf.placeholder('float',[None,14,32,1])
 y = tf.placeholder('float')
 
 def get_data():
-    df = pd.read_csv('data.csv')
+    df = pd.read_csv('indoor_track_data.csv')
     df.drop('Unnamed: 0',axis=1,inplace=True)
 
     df = df[df['448']!='S']
+    df = df[df['448']!='s']
 
     X = df.drop(str(14*32), axis=1)
     y = df[str(14*32)]
@@ -33,7 +34,7 @@ def get_data():
 
     le = preprocessing.LabelEncoder()
     y = le.fit_transform(y)
-    y_data = tf.contrib.keras.utils.to_categorical(y, 4)
+    y_data = tf.contrib.keras.utils.to_categorical(y, 3)
 
     X_train, X_test, y_train, y_test = train_test_split(X_data,y_data, random_state=0, test_size=0.3)
     X_test, X_val, y_test, y_val = train_test_split(X_test,y_test, random_state=0, test_size=0.5)
@@ -72,12 +73,12 @@ def cnn_model(x):
     print("Conv2 shape:", conv2.shape)
 
     rnn_input = tf.transpose(conv2,[1,0,2,3])
-    rnn_input = tf.reshape(rnn_input, [-1, 8*64])
+    rnn_input = tf.reshape(rnn_input, [-1, 4*64])
     rnn_input = tf.split(rnn_input, 4, 0)
 
     lstm_cell = rnn_cell.BasicLSTMCell(rnn_size)
     rnn_output, final_state = rnn.static_rnn(lstm_cell, rnn_input, dtype=tf.float32)
-    print("rnn_output shape:", rnn_output.shape)
+    # print("rnn_output shape:", rnn_output.shape)
 
     fc = tf.reshape(rnn_output, [-1, 512])
     fc = tf.matmul(fc, weights['W_fc']) + biases['b_fc']
