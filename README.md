@@ -1,4 +1,5 @@
 # Autonomous Car
+Collaborator: [Aman Agarwal](https://amanbasu.github.io), [Aditya Mishra](https://aditya985.github.io)
 
 This project uses various Deep Learning model architectures to classify the self-generated road data for building an autonomous car.
 
