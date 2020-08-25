@@ -3,6 +3,15 @@ Collaborator: [Aman Agarwal](https://amanbasu.github.io), [Aditya Mishra](https:
 
 This project uses various Deep Learning model architectures to classify the self-generated road data for building an autonomous car.
 
+[Link](amanagarwal.io/files/autoCar.pdf) to the paper.
+```
+@article{AmanAutoCar,
+  title={Behavioral Cloning in Autonomous Vehicle UsingDeep Learning},
+  author={Aman Agarwal and Aditya Mishra and Priyanka Sharma}
+}
+```
+
+
 ### How to run
 
 1. Download the **Autonomous-Arena** data from [kaggle](https://www.kaggle.com/firstofhisname/indoor-car-track).
