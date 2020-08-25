@@ -28,7 +28,7 @@ This project uses various Deep Learning model architectures to classify the self
 
 ### Car Prototype
 
-<img src="images/car_image.jpg" width="50%"/>
+<img src="images/Car_image.jpg" width="50%"/>
 
 ### Images
 
