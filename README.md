@@ -22,7 +22,7 @@ This project uses various Deep Learning model architectures to classify the self
    python tf_model_cnn.py
    ```
 
-3. Check this [notebook](review.ipynb) for more details.
+3. Check this [notebook](Review.ipynb) for more details.
 
 4. Use [this](https://www.kaggle.com/firstofhisname/autonomous-arena-guide) notebook to explore the dataset.
 
@@ -61,4 +61,4 @@ The RNN model was trained with two LSTM layers. Accuracy was 93%.
 The final model was cnn followed by rnn. This model performed very badly on the training data with the accuracy of 70% since, after the convolutional layer, there was huge loss in the temporal features of the data.
 [Go to file](tf_model_cnn_rnn.py)
 
-Find more details about the project [here](review.ipynb).
+Find more details about the project [here](Review.ipynb).
