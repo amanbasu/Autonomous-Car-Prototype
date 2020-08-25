@@ -19,8 +19,8 @@ img_y = 14
 # total features: 32x14 = 448
 
 # reading training data
-df = pd.read_csv('data.csv')
-df.drop('Unnamed: 0',axis=1,inplace=True)
+df = pd.read_csv('autonomous_arena.csv')
+
 df = df[df[str(448)]!='S']
 df = df[df[str(448)]!='s']
 

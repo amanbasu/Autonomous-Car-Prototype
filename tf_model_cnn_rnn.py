@@ -18,9 +18,9 @@ x = tf.placeholder('float',[None,14,32,1])
 y = tf.placeholder('float')
 
 def get_data():
-    df = pd.read_csv('indoor_track_data.csv')
-    df.drop('Unnamed: 0',axis=1,inplace=True)
+    df = pd.read_csv('autonomous_arena.csv')
 
+    # filter labels containing 'S' - stop
     df = df[df['448']!='S']
     df = df[df['448']!='s']
 
@@ -88,6 +88,7 @@ def cnn_model(x):
     
     output = tf.matmul(fc, weights['out']) + biases['out']
     print("output shape:",output.shape)
+    
     return output
 
 def train_model(x):
@@ -118,4 +119,6 @@ def train_model(x):
         correct = tf.equal(tf.argmax(prediction,1), tf.argmax(y,1))
         accuracy = tf.reduce_mean(tf.cast(correct,'float'))
         print('Accuracy: ', accuracy.eval({x: X_test, y: y_test}))
-train_model(x)
+
+if __name__ == '__main__':
+    train_model(x)

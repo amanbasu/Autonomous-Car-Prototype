@@ -17,10 +17,11 @@ x = tf.placeholder('float',[None, n_chunks, chunk_size])
 y = tf.placeholder('float')
 
 def get_data():
-    df = pd.read_csv('data.csv')
-    df.drop('Unnamed: 0',axis=1,inplace=True)
+    df = pd.read_csv('autonomous_arena.csv')
 
+    # filter labels containing 'S' - stop
     df = df[df['448']!='S']
+    df = df[df['448']!='s']
 
     X = df.drop(str(14*32), axis=1)
     y = df[str(14*32)]
@@ -97,4 +98,6 @@ def train_model(x):
         correct = tf.equal(tf.argmax(prediction,1), tf.argmax(y,1))
         accuracy = tf.reduce_mean(tf.cast(correct,'float'))
         print('Accuracy: ', accuracy.eval({x: X_test.reshape((-1, n_chunks, chunk_size)), y: y_test}))
-train_model(x)
+
+if __name__ == '__main__':
+    train_model(x)
