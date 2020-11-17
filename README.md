@@ -5,7 +5,8 @@ This project uses various Deep Learning model architectures to classify the self
 ```
 @article{agarwalBehavioral20,
   title={Behavioral Cloning in Autonomous Vehicle Using Deep Learning},
-  author={Aman Agarwal and Aditya Mishra and Priyanka Sharma}
+  author={Aman Agarwal and Aditya Mishra and Priyanka Sharma},
+  year={2020}
 }
 ```
 
